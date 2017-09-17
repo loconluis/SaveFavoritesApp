@@ -1,0 +1,21 @@
+{
+  "name": "api-restful-favoritos",
+  "version": "0.1.0",
+  "description": "\"Api para guardar marcadores favoritos\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "lint": "standard"
+  },
+  "author": "Luis Locon <luis.locon@gmail.com> (https://twitter.com/loconluis)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "mongoose": "^4.10.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1",
+    "standard": "^10.0.3"
+  }
+}
