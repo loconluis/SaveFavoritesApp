@@ -10,6 +10,6 @@ api.get('/prueba/:nombre?', FavoritoController.prueba)
 api.get('/favorito/:id', FavoritoController.getFavorite)
 api.get('/favoritos', FavoritoController.allFavorites)
 api.post('/favorito', FavoritoController.saveFavorite)
-api.put('/favorito', FavoritoController.updateFavorite)
+api.put('/favorito/:id', FavoritoController.updateFavorite)
 api.delete('/favorito', FavoritoController.deleteFavorite)
 module.exports = api

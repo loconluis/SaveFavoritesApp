@@ -61,9 +61,15 @@ function saveFavorite (req, res) {
 
 // actualiza un favorito
 function updateFavorite (req, res) {
-  let params = req.body
-  res.status(200).send({
-    favorite: params
+  let favoriteID = req.params.id
+  let update = req.body
+
+  Favorite.findByIdAndUpdate(favoriteID, update, (err, favUpdate) => {
+    // Manejo del error
+    if (err) { res.status(500).send({ message: 'Error al actualizar el marcador' }) }
+
+    // exitoso
+    res.status(200).send({ favUpdate })
   })
 }
 
