@@ -15,10 +15,10 @@ function getFavorite (req, res) {
   // devuelve un JSON con el dato requerido por id
   Favorite.findById(favoriteID, (err, fav) => {
     // manejo del error
-    if (err) { res.status(500).send({ message: 'Error al devolver el marcador' }) }
+    if (err) { return res.status(500).send({ message: 'Error al devolver el marcador' }) }
 
     // si la respuesta es vacia
-    if (!fav) { res.status(404).send({ message: 'No hay marcador' }) }
+    if (!fav) { return res.status(404).send({ message: 'No hay marcador' }) }
 
     // Si devuelve una respuesta
     res.status(200).send({ fav })
