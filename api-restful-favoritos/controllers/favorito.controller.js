@@ -75,10 +75,26 @@ function updateFavorite (req, res) {
 
 // Elimina un favorito
 function deleteFavorite (req, res) {
-  let params = req.body
+  let favoriteID = req.params.id
 
-  res.status(200).send({
-    favorite: params
+  // devuelve un JSON con el dato requerido por id
+  Favorite.findById(favoriteID, (err, fav) => {
+    // manejo del error
+    if (err) { res.status(500).send({ message: 'Error al devolver el marcador' }) }
+
+    // si la respuesta es vacia
+    if (!fav) {
+      res.status(404).send({ message: 'No hay marcador' })
+    } else {
+      // si existe el dato para eliminar
+      fav.remove(err => {
+        if (err) {
+          res.status(500).send({ message: 'El marcador no se ha eliminado' })
+        } else {
+          res.status(200).send({ message: 'El marcador se ha eliminado' })
+        }
+      })
+    }
   })
 }
 
