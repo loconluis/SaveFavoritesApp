@@ -10,12 +10,36 @@ function prueba (req, res) {
 
 // Obtiene el favorito (single)
 function getFavorite (req, res) {
+  let favoriteID = req.params.id
 
+  // devuelve un JSON con el dato requerido por id
+  Favorite.findById(favoriteID, (err, fav) => {
+    // manejo del error
+    if (err) { res.status(500).send({ message: 'Error al devolver el marcador' }) }
+
+    // si la respuesta es vacia
+    if (!fav) { res.status(404).send({ message: 'No hay marcador' }) }
+
+    // Si devuelve una respuesta
+    res.status(200).send({ fav })
+  })
 }
 
 // Lista los favoritos
 function allFavorites (req, res) {
+  // devuelve un JSON con los datos en la coleccion
+  Favorite.find({}).sort('-_id').exec((err, favs) => {
+    // manejo del error
+    if (err) { res.status(500).send({ message: 'Error al devolver marcadores' }) }
 
+    // respuesta vacia
+    if (!favs) {
+      res.status(404).send({ message: 'No hay marcadores' })
+    }
+
+    // respuesta con datos
+    res.status(200).send({ favs })
+  })
 }
 
 // Guarda un nuevo favorito
