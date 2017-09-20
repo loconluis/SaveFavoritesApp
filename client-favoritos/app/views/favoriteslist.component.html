@@ -1,6 +1,6 @@
 <h3>{{ title }}</h3>
 
-<div>
+<div class="container" [ngClass]="{bordeVerde: flag == false, bordeNegro: flag == true}">
   <ul id="favoritos" *ngIf="!flag == true">
     <li *ngFor="let favorito of favoritos">
       {{ favorito }}
