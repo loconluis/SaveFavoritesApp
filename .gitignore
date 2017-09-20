@@ -1,3 +1,9 @@
 # Api Rest
 
 /api-restful-favoritos/node_modules
+
+# Client 
+
+/client-favoritos/node_modules
+/client-favoritos/app/*.js
+/client-favoritos/app/*.map
