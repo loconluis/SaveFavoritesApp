@@ -1,1 +1,10 @@
 <h3>{{ title }}</h3>
+
+<div>
+  <ul id="favoritos" *ngIf="!flag == true">
+    <li *ngFor="let favorito of favoritos">
+      {{ favorito }}
+    </li>
+  </ul>
+  <button (click)="changeState()">Cambiar Estado</button>
+</div>
