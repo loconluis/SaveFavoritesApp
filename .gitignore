@@ -7,3 +7,5 @@
 /client-favoritos/node_modules
 /client-favoritos/app/*.js
 /client-favoritos/app/*.map
+/client-favoritos/app/components/*.js
+/client-favoritos/app/components/*.map
