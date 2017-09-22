@@ -9,6 +9,7 @@ import { Favorite } from '../models/favorites.model';
 
 export class FavoritesListComponent implements OnInit{
   title: string;
+  favorites: Favorite[];
   errorMessage: any;
 
   constructor(private favoriteService : FavoriteService) {
@@ -19,8 +20,12 @@ export class FavoritesListComponent implements OnInit{
      console.log('Favoriteslistcomponent cargado');
      this.favoriteService.allFavorites()
       .subscribe(result => {
-        console.log(result);
-        
+        console.log(result.favs);
+        this.favorites = result.favs;
+
+        if (!this.favorites) {
+          alert('error en el servidor');
+        }
       }, err => {
         // error
         this.errorMessage = <any>err;

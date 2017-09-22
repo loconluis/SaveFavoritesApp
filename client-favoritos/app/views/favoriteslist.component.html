@@ -1,9 +1,9 @@
-<h3>{{ title }}</h3>
+<strong>{{ title }}</strong>
 
-<div class="container" [ngClass]="{bordeVerde: flag == false, bordeNegro: flag == true}">
-  <ul id="favoritos" *ngIf="!flag == true">
-    <li *ngFor="let favorito of favoritos">
-      {{ favorito }}
+<div class="container">
+  <ul id="favoritos-list">
+    <li *ngFor="let favorite of favorites" class="favorite-item">
+      <h4>{{ favorite.title }}</h4>
     </li>
   </ul>
 </div>
