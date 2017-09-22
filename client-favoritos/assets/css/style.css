@@ -51,6 +51,76 @@ header #logo {
   margin-top: 10px;
 }
 
+#favoritos-list{
+  padding: 0px;
+  margin: 0px;
+}
+
+.favorite-item {
+  list-style: none;
+  float: left;
+  width: 31%;
+  border: 1px solid #ddd;
+  height: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: gray;
+  background: white;
+  margin: 10px;
+}
+
+.favorite-item .data {
+  float: left;
+  margin-left: 20px;
+}
+
+.favorite-item h4 {
+  color: #444;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 5px;
+}
+
+.favorite-item .url {
+  margin: 0px;
+  margin-top: 2px;
+  padding: 0px;
+  height: 45px;
+  overflow: hidden;
+  
+}
+
+.btn {
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-color: #1976d2;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #ddd;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  background: #0074d9;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.btn-editar {
+  background: #0a0;
+  border-color: #59a600;
+}
+
+.btn-eliminar {
+  background: #e23237;
+  border-color: #f54747;
+}
+
+.btn-default {
+  background: #eaa615;
+  border-color: #cc941c;
+  color: white;
+  margin-left: 0px;
+}
+
 footer {
   width: 80%;
   margin: 0 auto;
