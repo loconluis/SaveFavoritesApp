@@ -121,6 +121,19 @@ header #logo {
   margin-left: 0px;
 }
 
+/*detail component*/
+.favorite-box {
+  margin-left: 25px;
+  background: white;
+  border: 1px solid #ddd;
+  width: 85%;
+  min-height: 150px;
+  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
 footer {
   width: 80%;
   margin: 0 auto;

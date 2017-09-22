@@ -19,5 +19,10 @@ export class FavoriteService {
     return this.http.get(this.url+'favoritos')
       .map(res => res.json())
   }
+
+  getFavorite(id:string) {
+    return this.http.get(this.url+'favorito/'+id)
+      .map(res => res.json())
+  }
   
 }
