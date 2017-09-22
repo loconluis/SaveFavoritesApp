@@ -9,3 +9,7 @@
 /client-favoritos/app/*.map
 /client-favoritos/app/components/*.js
 /client-favoritos/app/components/*.map
+/client-favoritos/app/models/*.js
+/client-favoritos/app/models/*.map
+/client-favoritos/app/services/*.js
+/client-favoritos/app/services/*.map
