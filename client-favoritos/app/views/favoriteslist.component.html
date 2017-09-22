@@ -9,7 +9,8 @@
           <a href="{{ favorite.url }}" target="_blank" class="btn btn-default">
             Ir al marcador
           </a>
-          <a href="{{ favorite.url }}" target="_blank" class="btn btn-ver">
+          <!-- usando routerLink para movernos entre los componentes -->
+          <a [routerLink]="['/marcador', favorite._id]" class="btn btn-ver">
             Ver
           </a>
           <a href="{{ favorite.url }}" target="_blank" class="btn btn-editar">

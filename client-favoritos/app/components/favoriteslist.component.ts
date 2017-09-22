@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 import { FavoriteService } from '../services/favorite.service';
 import { Favorite } from '../models/favorites.model';
 
@@ -17,10 +19,9 @@ export class FavoritesListComponent implements OnInit{
    }
 
    ngOnInit() {
-     console.log('Favoriteslistcomponent cargado');
      this.favoriteService.allFavorites()
       .subscribe(result => {
-        console.log(result.favs);
+        // console.log(result.favs);
         this.favorites = result.favs;
 
         if (!this.favorites) {

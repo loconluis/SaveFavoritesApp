@@ -4,20 +4,25 @@ import { AppComponent }  from './app.component';
 import { FavoritesListComponent } from './components/favoriteslist.component';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { FavoriteService } from './services/favorite.service';
+import { appRoutingProviders, routing } from './app.routing';
+import { FavoriteDetailComponent } from './components/favorite-details.component';
 
 @NgModule({
   imports:      [ 
     BrowserModule,
-    HttpModule
+    HttpModule,
+    routing
    ],
   declarations: [ 
     AppComponent, 
-    FavoritesListComponent
+    FavoritesListComponent,
+    FavoriteDetailComponent
   ],
   providers: [
-    FavoriteService
+    FavoriteService,
+    appRoutingProviders
   ],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [ AppComponent ]
 })
  
 export class AppModule { }
