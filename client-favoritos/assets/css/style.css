@@ -134,6 +134,11 @@ header #logo {
   margin-top: 20px;
 }
 
+/*loader*/
+.loading {
+  margin: 25px;
+}
+
 footer {
   width: 80%;
   margin: 0 auto;

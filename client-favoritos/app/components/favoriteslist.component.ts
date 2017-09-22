@@ -13,9 +13,11 @@ export class FavoritesListComponent implements OnInit{
   title: string;
   favorites: Favorite[];
   errorMessage: any;
+  loading: boolean;
 
   constructor(private favoriteService : FavoriteService) {
     this.title = 'Lista de Favoritos';
+    this.loading = true;
    }
 
    ngOnInit() {
@@ -26,6 +28,8 @@ export class FavoritesListComponent implements OnInit{
 
         if (!this.favorites) {
           alert('error en el servidor');
+        }else {
+          this.loading = false;
         }
       }, err => {
         // error
