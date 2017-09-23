@@ -6,6 +6,8 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { FavoriteService } from './services/favorite.service';
 import { appRoutingProviders, routing } from './app.routing';
 import { FavoriteDetailComponent } from './components/favorite-details.component';
+import { FavoriteNewComponent } from './components/favorite-new.component';
+
 
 @NgModule({
   imports:      [ 
@@ -16,7 +18,8 @@ import { FavoriteDetailComponent } from './components/favorite-details.component
   declarations: [ 
     AppComponent, 
     FavoritesListComponent,
-    FavoriteDetailComponent
+    FavoriteDetailComponent,
+    FavoriteNewComponent
   ],
   providers: [
     FavoriteService,

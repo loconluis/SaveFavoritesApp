@@ -4,10 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 // importacion de componentes
 import { FavoritesListComponent } from './components/favoriteslist.component';
 import { FavoriteDetailComponent } from './components/favorite-details.component';
+import { FavoriteNewComponent } from './components/favorite-new.component';
 
 const routes: Routes = [
+  // json con las rutas, y el componente que va a renderear
   { path: '', component: FavoritesListComponent },
   { path: 'marcador/:id', component: FavoriteDetailComponent },
+  { path: 'nuevo', component: FavoriteNewComponent },
   { path: '**', component: FavoritesListComponent },
 ];
 
