@@ -1,1 +1,20 @@
-<h2>Nuevo Favorito</h2>
+<h1>{{ bigtitle }}</h1>
+
+<form #formFavorite="ngForm" class="favorite-box" (ngSubmit)="onSubmit()">
+  <label for="">Titulo:</label>
+  <p>
+    <input type="text" name="title" #title="ngModel" [(ngModel)]="favorite.title" required />
+    <span *ngIf="title.touched && !title.valid">El titulo no es correcto</span>
+  </p>
+  <label for="">URL:</label>
+  <p>
+    <input type="url" name="url" #url="ngModel" [(ngModel)]="favorite.url" required />
+    <span *ngIf="url.touched && !url.valid">La URL no es correcto</span>
+  </p>
+  <label for="">Descripcion:</label>
+  <p>
+    <textarea type="text" name="description" #description="ngModel" [(ngModel)]="favorite.description" required></textarea>
+    <span *ngIf="description.touched && !description.valid">La descripcion no es correcta</span>
+  </p>
+  <input type="submit" value="{{ bigtitle }}">
+</form>

@@ -1,5 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { FavoritesListComponent } from './components/favoriteslist.component';
 import { HttpModule, JsonpModule } from '@angular/http';
@@ -13,6 +14,7 @@ import { FavoriteNewComponent } from './components/favorite-new.component';
   imports:      [ 
     BrowserModule,
     HttpModule,
+    FormsModule,
     routing
    ],
   declarations: [ 
