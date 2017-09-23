@@ -16,7 +16,7 @@
           <a [routerLink]="['/marcador', favorite._id]" class="btn btn-ver">
             Ver
           </a>
-          <a href="{{ favorite.url }}" target="_blank" class="btn btn-editar">
+          <a [routerLink]="['/marcador/editar', favorite._id]" class="btn btn-editar">
             Editar
           </a>
           <a href="{{ favorite.url }}" target="_blank" class="btn btn-eliminar">

@@ -8,6 +8,7 @@ import { FavoriteService } from './services/favorite.service';
 import { appRoutingProviders, routing } from './app.routing';
 import { FavoriteDetailComponent } from './components/favorite-details.component';
 import { FavoriteNewComponent } from './components/favorite-new.component';
+import { FavoriteEditComponent } from './components/favorite-edit.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FavoriteNewComponent } from './components/favorite-new.component';
     AppComponent, 
     FavoritesListComponent,
     FavoriteDetailComponent,
-    FavoriteNewComponent
+    FavoriteNewComponent,
+    FavoriteEditComponent
   ],
   providers: [
     FavoriteService,
