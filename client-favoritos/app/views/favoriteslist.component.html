@@ -19,10 +19,20 @@
           <a [routerLink]="['/marcador/editar', favorite._id]" class="btn btn-editar">
             Editar
           </a>
-          <a href="{{ favorite.url }}" target="_blank" class="btn btn-eliminar">
+          <a (click)="onDeleteConfirm(favorite._id)" class="btn btn-eliminar">
             Eliminar
           </a>
         </p>
+
+          <div class="sure" *ngIf="flagToDelete == favorite._id">
+            <p><span><strong>¿Estas seguro de querer borrar el favorito?</strong></span></p>
+            <a (click)="onDeleteFavorite(favorite._id)" class="btn btn-eliminar">
+              Eliminar
+            </a>
+            <a (click)="onCancelConfirm(favorite._id)" class="btn btn-ver">
+              Cancelar
+            </a>
+          </div>
       </div>
     </li>
   </ul>

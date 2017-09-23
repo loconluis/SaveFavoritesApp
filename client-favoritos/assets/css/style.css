@@ -161,6 +161,16 @@ header #logo {
   margin: 25px;
 }
 
+/* sure */
+.sure {
+  position: absolute;
+  margin-top: -95px;
+  background: white;
+  width: 275px;
+  color: gray;
+  text-align: center;
+}
+
 footer {
   width: 80%;
   margin: 0 auto;
